@@ -4,13 +4,13 @@ int count=0;
 
 char hex(int a, char *output)	
 {
-	if(a>0)
+	if(a > 0)
 	{
-		if(a%16<10)
-			*(output+count) = '0'+a%16;
+		if(a % 16 < 10)
+			*(output+count) = '0' + a % 16;
 		else
-			*(output+count) = 'a'+a%16-10;
-		count++;
+			*(output+count) = 'a' + a % 16-10;
+		count += 1;
 		return hex(a/16, output);
 	}
 }
